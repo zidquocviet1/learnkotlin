@@ -1,3 +1,6 @@
+import oop.Rectangle
+import oop.Square
+
 fun sum(a : Int, b : Int): Int {
     return a + b
 }

@@ -1,3 +1,5 @@
+package oop
+
 abstract class Shape(var name: String) {
     abstract fun calculatePerimeter(): Double
 
