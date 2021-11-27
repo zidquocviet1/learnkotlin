@@ -1,3 +1,5 @@
+import basic.Condition
+import basic.Looper
 import oop.Rectangle
 import oop.Square
 
@@ -26,14 +28,35 @@ fun main() {
     voidFunc(a, c)
     voidFuncOmittedUnit(b, c)
 
-    val rectangle = Rectangle(5, 10)
-    val square = Square(2, 10)
-    val listShape = listOf(rectangle, square)
+    // Exercise with loop
+    println()
+    println("*".repeat(20) + " Exercise with loop (For, While) " + "*".repeat(20))
+    Looper.forEachItem()
+    Looper.forEachItemUsingIndex()
+    Looper.forEachItemUsingIndexAndForRange(start = 3)
+    Looper.forEachUsingDownTo(to = 1, step = 2)
+    Looper.forEachUsingWithIndex()
+    Looper.whileLoop()
+    Looper.doWhileLoop()
+    Looper.forLoopUsingBreak()
+    Looper.forLoopUsingReturn()
+    Looper.forLoopUsingReturnWithLabel()
 
-    for (item in listShape) {
-        println(item.toString())
-    }
-
-    println("Value of b in the secondary constructor in Square = ${square.b}")
-    println("Value of a in the primary constructor in Square class = ${square.a}")
+    // Exercise with condition
+    println()
+    println("*".repeat(20) + " Exercise with condition (if-else, when) " + "*".repeat(20))
+    println("Is a larger than b? ${Condition.maxExpression(10, 5)}")
+    println("The number is picked up: ${Condition.ifReturnWithBranches(5, 10)}")
+    Condition.exampleUsingWhen(1)
+    Condition.exampleUsingWhen(3)
+    Condition.whenMixFor(listOf(-1, 0, 19, 4, 12, 5, 1))
+    println("Return item in when condition with value is: ${Condition.whenReturnItem(listOf(-1, 0, 19, 4, 12, 5, 1), 7)}")
+    Condition.whenCheckVarType("String")
+    Condition.whenCheckVarType(1)
+    Condition.whenCheckVarType(1.0)
+    Condition.whenCheckVarType(Int.MAX_VALUE.toByte())
+    Condition.whenCheckVarType(listOf(Byte.MAX_VALUE))
+    println(Condition.returnValueWithNullSafety(null))
+    println(Condition.returnValueWithNullSafety(name = "Mai Quoc Viet"))
+    println(Condition.checkValueWithNothingType("aba"))
 }
