@@ -14,4 +14,14 @@ fun main() {
 
     val stringList = listOf("java", "android", "kotlin")
     println(stringList.getLongestString())
+
+    val adminUser = User(username = "admin", password = "admin")
+    val otherAdmin = adminUser.copy(username = "cto")
+
+    println(adminUser)
+    println(otherAdmin)
+
+    // Destructuring data class
+    val (username, password) = otherAdmin
+    println("Other admin has username: $username, password: $password")
 }
