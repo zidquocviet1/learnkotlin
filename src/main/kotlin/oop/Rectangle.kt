@@ -8,4 +8,8 @@ class Rectangle(private val width: Int, private val height: Int) : Shape(name = 
     }
 
     override fun calculateArea() = width.times(height).toDouble()
+
+    override fun draw() {
+        TODO("Not yet implemented")
+    }
 }

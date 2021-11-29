@@ -1,6 +1,6 @@
 package oop
 
-abstract class Shape(var name: String) {
+abstract class Shape(var name: String) : Drawable{
     abstract fun calculatePerimeter(): Double
 
     abstract fun calculateArea(): Double

@@ -10,4 +10,8 @@ class Square(val a: Int): Shape(name = "oop.Square") {
     override fun calculatePerimeter() = 4 * a.toDouble()
 
     override fun calculateArea() = a.times(a).toDouble()
+
+    override fun draw() {
+        TODO("Not yet implemented")
+    }
 }
