@@ -24,8 +24,18 @@ class Derived(b: Base) : Base by b {
     }
 }
 
+typealias Predicate<T> = (T) -> Boolean
+
+fun foo(p: Predicate<Int>) = p(42)
+
 fun main() {
     val b = BaseImpl(10)
     Derived(b).print()
     Derived(b).println()
+
+    val f: (Int) -> Boolean = { it > 0 }
+    val p: Predicate<Int> = { it > 0 }
+
+    println(foo(f))
+    println(listOf(-1, 2).filter(p))
 }
